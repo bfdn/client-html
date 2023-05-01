@@ -1,0 +1,196 @@
+// VARIABLES
+@font-face {
+    font-family: 'Sen-Bold';
+    src: url("../fonts/Sen-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Sen-ExtraBold';
+    src: url("../fonts/Sen-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: 'Sen-Regular';
+    src: url("../fonts/Sen-Regular.ttf");
+}
+
+
+
+@mixin mq($width: "tablet") {
+
+    @if($width =="small") {
+
+        // Medium devices (tablets, 576px and up)
+        @media (min-width: 576px) {
+            @content
+        }
+    }
+
+    @else if($width =="tablet") {
+
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) {
+            @content
+        }
+    }
+
+    @else if($width =="desktop") {
+
+        // Large devices (desktops, 992px and up)
+        @media (min-width: 992px) {
+            @content
+        }
+    }
+
+    @else if($width =="large") {
+
+        // Extra large devices (large desktops, 1200px and up)
+        @media (min-width: 1200px) {
+            @content
+        }
+    }
+
+    @else if($width =="xlarge") {
+
+        // Extra large devices (large desktops, 1400px and up)
+        @media (min-width: 1400px) {
+            @content
+        }
+    }
+
+    @else if($width =="xxlarge") {
+
+        // Extra large devices (large desktops, 1920px and up)
+        @media (min-width: 1920px) {
+            @content
+        }
+    }
+}
+
+@function pxtorem($value) {
+    @return ($value / 18px)+rem;
+}
+
+$font-regular: 'Sen-Regular';
+$font-bold: 'Sen-Bold';
+$font-extra-bold: 'Sen-ExtraBold';
+
+
+// Font Boyutları
+$font-size-s: pxtorem(14px);
+$font-size-xs: pxtorem(16px);
+$font-size-xxs: pxtorem(18px);
+$font-size-m: pxtorem(20px);
+$font-size-xm: pxtorem(24px);
+$font-size-xxm: pxtorem(28px);
+$font-size-l: pxtorem(36px);
+$font-size-xl: pxtorem(48px);
+$font-size-xxl: pxtorem(56px);
+//$font-size-xxxl: pxtorem(48px);
+
+
+
+// Renkler 
+$black-color: #232536;
+$yellow-color: #FFD050;
+$gray-color-dark: #4C4C4C;
+$gray-color-medium: #6D6E76;
+$purple-color: #592EA9;
+$light-color: #FFFFFF;
+$yellow-color-light: #FBF6EA;
+$gray-color-light: #F4F4F4;
+$lavender-color: #F4F0F8;
+
+$bg-color: #E5E5E5;
+
+
+
+// GENEL KODLAR
+body,
+html {
+    font-family: $font-regular !important;
+    font-size: 16px !important;
+    //line-height: 1.4;
+    //font-size: 16px !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-bold;
+    font-weight: 700;
+    color: $black-color !important;
+}
+
+h1 {
+    font-size: $font-size-xl;
+    line-height: pxtorem(64px);
+}
+
+h2 {
+    font-size: $font-size-l;
+    line-height: pxtorem(48px);
+}
+
+h3 {
+    font-size: $font-size-xxm;
+    line-height: pxtorem(40px);
+}
+
+h4 {
+    font-size: $font-size-xm;
+}
+
+h5 {
+    font-size: $font-size-m;
+}
+
+h4,
+h5 {
+    line-height: pxtorem(32px);
+}
+
+h6 {
+    font-size: $font-size-xs;
+    line-height: pxtorem(24px);
+}
+
+.w-30 {
+    @include mq('desktop') {
+        width: 30% !important;
+    }
+}
+
+.w-60 {
+    @include mq('desktop') {
+        width: 60% !important;
+    }
+}
+
+.w-75 {
+    @include mq('desktop') {
+        width: 75% !important;
+    }
+}
+
+.btn-yellow {
+    border-radius: initial;
+    background-color: $yellow-color;
+    padding: pxtorem(16px) pxtorem(48px);
+    color: $black-color;
+    font-weight: 700;
+    max-width: pxtorem(210px);
+    font-size: $font-size-xxs;
+    margin-top: pxtorem(30px);
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $yellow-color;
+    }
+
+
+}

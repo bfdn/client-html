@@ -1,0 +1,22 @@
+.header {
+    background: $black-color;
+    //height: pxtorem(80px);
+
+    .navbar {
+        &-nav {
+            .nav-item {
+                &:last-child {
+                    .nav-link {
+                        background-color: $light-color;
+                        padding: pxtorem(16px) pxtorem(48px);
+                        color: $black-color;
+                        font-weight: 700;
+                        max-width: pxtorem(172px);
+                    }
+                }
+
+                .nav-link {}
+            }
+        }
+    }
+}

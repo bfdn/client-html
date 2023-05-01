@@ -1,0 +1,11 @@
+@import "config/variable";
+
+// helper
+@import "helper/normalize";
+@import "helper/formalize";
+
+// global
+@import "global/header";
+@import "global/footer";
+// pages
+@import "pages/index.scss";

@@ -1,0 +1,49 @@
+.footer {
+    margin-top: pxtorem(128px);
+    background-color: $black-color;
+
+    .container {
+        padding-top: pxtorem(60px);
+        padding-bottom: pxtorem(60px);
+    }
+
+    .form {
+        background-color: rgba(255, 255, 255, .05);
+        padding: pxtorem(80px) pxtorem(64px);
+    }
+
+    form {
+        input {
+
+            max-height: 56px;
+            height: 56px;
+            background-color: transparent;
+            border-color: $gray-color-dark;
+            color: $gray-color-medium;
+
+            @include mq('desktop') {
+                width: 75%;
+            }
+
+            @include mq('large') {
+                width: 65%;
+            }
+
+            &::placeholder {
+                color: $gray-color-medium;
+            }
+        }
+    }
+
+    &-text {
+        p {
+            color: rgba(255, 255, 255, .7);
+        }
+    }
+
+    .social {
+        a {
+            color: $gray-color-medium;
+        }
+    }
+}
